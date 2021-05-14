@@ -1,0 +1,129 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Library</title>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script>
+                    $(document).ready(function(){
+                        $("#filterbtn").click(function() {
+                            $.get("/Main/GetBooksWithGenre", {genre : $("#genre").val()},
+                                function(data,status) {
+                                    $("#maindiv").html(data);
+                                });
+                            var div = document.getElementById('search');
+                            div.innerHTML += document.getElementById("genre").value + " ";
+                        });
+                    });
+
+                    $(document).ready(function () {
+                        $("#getallbtn").click(function () {
+                            $.get("/Main/GetBooks",
+                                function (data, status) {
+                                    $("#maindiv").html(data);
+                                });
+                        });
+                    });
+
+                    $(document).ready(function () {
+                        $("#getrentalsbtn").click(function () {
+                            $.get("/Main/GetRentals",
+                                function (data, status) {
+                                    $("#maindiv").html(data);
+                                });
+                        });
+        });
+    </script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        button, input {
+            border-radius: 12px;
+        }
+        p {
+            font-family:'Bookman Old Style';             
+        }
+        .menu {
+            display:flex;
+        }
+        .submenu {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+
+    <form action='/Main/logout' method='post'>
+        <input type='submit' value='Log out' name='logout' />
+    </form>
+
+    <div id="maindiv"></div><br />
+
+    <p>Book Section</p>
+
+    Genre: <input type="text" id="genre" />
+    <button id="filterbtn">Get Books by genre</button>
+    <button id="getrentalsbtn">Get All Rentals</button>
+    <button id="getallbtn">Get All Books</button><br />
+    <div id="search">Recenlty searched genres:</div><br />
+    <div class="menu">
+        <div class="submenu">
+            <form action='/Main/insertBook' method='post'>
+                Author: <input type="text" name="author" /><br />
+                Title: <input type="text" name="title" /><br />
+                Pages: <input type="text" name="pages" /><br />
+                Genre: <input type="text" name="bookgenre" /><br />
+                <input type='submit' value='Insert Book' name='insertB' />
+            </form>
+        </div>
+
+        <div class="submenu">
+            <form action='/Main/deleteBook' method='post'>
+                Book id: <input type="number" name="bookid" /><br />
+                <input type='submit' value='Delete Book' name='deleteB' onclick="return confirm('Are you sure to delete this book?')" />
+            </form>
+        </div>
+
+        <div class="submenu">
+            <form action='/Main/updateBook' method='post'>
+                Book id: <input type="number" name="idupdate" /><br />
+                Author: <input type="text" name="authorupdate" /><br />
+                Title: <input type="text" name="titleupdate" /><br />
+                Pages: <input type="text" name="pagesupdate" /><br />
+                Genre: <input type="text" name="genreupdate" /><br />
+                <input type='submit' value='Update Book' name='updateB' />
+            </form>
+        </div>
+    </div>
+    <br />
+
+    <p>Rental Section</p>
+
+    <div class="menu">
+        <div class="submenu">
+            <form action='/Main/insertRental' method='post'>
+                Book ID: <input type="number" name="bookrental" /><br />
+                Customer Name: <input type="text" name="customer" /><br />
+                <input type='submit' value='Insert Rental' name='insertR' />
+            </form>
+        </div>
+
+        <div class="submenu">
+            <form action='/Main/deleteRental' method='post'>
+                Book id: <input type="number" name="bookdelete" /><br />
+                <input type='submit' value='Delete Rental' name='deleteR' onclick="return confirm('Are you sure to delete this rental?')" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body {
+    background-color: aquamarine;
+}
+button {
+    border-radius: 12px;
+    background-color: #4CAF50;
+
+}
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+#question-table  td {
+    border: 1px solid black;
+}

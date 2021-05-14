@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <title>Java Script</title>
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+  <body>
+    <div class = "menu">
+      <div class = "submenu">
+        <button class = "menuBtn" onclick="displaySubmenu1()">First Year</button>
+        <div class = "subMenuContent" id = "1">
+          <a href="#">911</a>
+          <a href="#">912</a>
+          <a href="#">913</a>
+          <a href="#">914</a>
+        </div>
+      </div>
+      <div class = "submenu">
+        <button class = "menuBtn" onclick="displaySubmenu2()">Second Year</button>
+        <div class = "subMenuContent" id = "2">
+          <a href="#">921</a>
+          <a href="#">922</a>
+          <a href="#">923</a>
+          <a href="#">924</a>
+        </div>
+      </div>
+      <div class = "submenu">
+        <button class = "menuBtn" onclick="displaySubmenu3()">Third Year</button>
+        <div class = "subMenuContent" id = "3">
+          <a href="#">931</a>
+          <a href="#">932</a>
+          <a href="#">933</a>
+          <a href="#">934</a>
+        </div>
+      </div>
+      <div class = "submenu">
+        <button class = "menuBtn" onclick="displaySubmenu4()">Fourth Year</button>
+        <div class = "subMenuContent" id = "4">
+          <a href="#">941</a>
+          <a href="#">942</a>
+          <a href="#">943</a>
+          <a href="#">944</a>
+        </div>
+      </div>
+      <div class = "submenu">
+        <button class = "menuBtn" onclick="displaySubmenu5()">Fifth Year</button>
+        <div class = "subMenuContent" id = "5">
+          <a href="#">951</a>
+          <a href="#">952</a>
+          <a href="#">953</a>
+          <a href="#">954</a>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      function displaySubmenu1() {
+        document.getElementById("1").classList.toggle("show");
+        document.getElementById("2").classList.remove("show");
+        document.getElementById("3").classList.remove("show");
+        document.getElementById("4").classList.remove("show");
+        document.getElementById("5").classList.remove("show");
+      }
+      function displaySubmenu2() {
+        document.getElementById("2").classList.toggle("show");
+        document.getElementById("1").classList.remove("show");
+        document.getElementById("3").classList.remove("show");
+        document.getElementById("4").classList.remove("show");
+        document.getElementById("5").classList.remove("show");
+      }
+      function displaySubmenu3() {
+        document.getElementById("3").classList.toggle("show");
+        document.getElementById("2").classList.remove("show");
+        document.getElementById("1").classList.remove("show");
+        document.getElementById("4").classList.remove("show");
+        document.getElementById("5").classList.remove("show");
+      } function displaySubmenu4() {
+        document.getElementById("4").classList.toggle("show");
+        document.getElementById("2").classList.remove("show");
+        document.getElementById("3").classList.remove("show");
+        document.getElementById("1").classList.remove("show");
+        document.getElementById("5").classList.remove("show");
+      } function displaySubmenu5() {
+        document.getElementById("5").classList.toggle("show");
+        document.getElementById("2").classList.remove("show");
+        document.getElementById("3").classList.remove("show");
+        document.getElementById("4").classList.remove("show");
+        document.getElementById("1").classList.remove("show");
+      }
+
+      window.onclick = function(e) {
+        if (!e.target.matches(".menuBtn")) {
+          var content1 = document.getElementById("1");
+          var content2 = document.getElementById("2");
+          var content3 = document.getElementById("3");
+          var content4 = document.getElementById("4");
+          var content5 = document.getElementById("5");
+          if (content1.classList.contains("show")) {
+            content1.classList.remove("show");
+          }
+          if (content2.classList.contains("show")) {
+            content2.classList.remove("show");
+          }
+          if (content3.classList.contains("show")) {
+            content3.classList.remove("show");
+          }
+          if (content4.classList.contains("show")) {
+            content4.classList.remove("show");
+          }
+          if (content5.classList.contains("show")) {
+            content5.classList.remove("show");
+          }
+        }
+      }
+    </script>
+
+  </body>
+</html>

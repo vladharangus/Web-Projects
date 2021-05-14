@@ -1,0 +1,185 @@
+body {
+  background-color: white;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  text-align: center;
+  background-color: white;
+}
+.mainDiv {
+  background-color: #f2f2f2;
+}
+h1 {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 220px;
+  font-size: 30px;
+  font-family: Arial;
+  color: #e60000;
+  padding-bottom: 10px;
+  padding-top: 7px;
+}
+#header {
+  padding-bottom: 15px;
+  padding-right: 70px;
+  margin-top: 20px;
+  margin-left: 340px;
+  list-style-type: none;
+  overflow: hidden;
+}
+#header li {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  float: left;
+  color: black;
+  font-family: Arial;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+}
+.lolwin {
+  position: absolute;
+  top:0px;
+  margin-left: 300px;
+  width: 235px;
+  height: 45px;
+  padding-bottom: 5px;
+  padding-left: 50px;
+}
+
+.topnav ul{
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  list-style-type: none;
+  overflow: hidden;
+}
+.topnav li{
+  font-size: 13px;
+  float: left;
+  color: black;
+  font-family: Arial;
+  padding-top: 0px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-decoration: none;
+}
+.leftcolumn {
+  margin-left: 170px;
+  float: left;
+  width: 53%;
+}
+.rightcolumn {
+  float: right;
+  width:34%;
+  background-color: #f1f1f1;
+  padding-left: 10px;
+}
+.fakeimg {
+  width: 100%;
+  height: 300px;
+
+}
+#topPage {
+  background-color: white;
+}
+
+.card {
+  background-color: white;
+  padding: 2px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.row {
+  content: "";
+  display: table;
+  clear: both;
+}
+#bignews {
+  font-weight: bold;
+  font-family: "Proxima Nova",Helvetica,Arial,sans-serif;
+  font-size: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.newsimage {
+  float: left;
+  width: 200px;
+  height: 170px;
+  margin-right: 10px;
+}
+.sageata {
+  float: left;
+  padding: 10px;
+  height: 27px;
+  width: 30px;
+  margin-right: 5px;
+}
+.fire {
+  float: left;
+  height: 27px;
+  width: 30px;
+}
+.bulina {
+  float: left;
+  padding: 5px;
+  height: 23px;
+  width: 26px;
+  margin-right: 5px;
+}
+.menu {
+  float: left;
+  padding: 15px;
+  height: 20px;
+  width: 32px;
+  margin-left: 170px;
+}
+.newstitle {
+  font-size:20px ;
+  font-weight: bold;
+  font-family: Arial;
+}
+.rightcard {
+  border-top: black;
+  border-top-width: 8px;
+  border-top-style: solid;
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 150px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+.rightcard2 {
+  border-top: #0066ff;
+  border-top-width: 8px;
+  border-top-style: solid;
+  padding: 0px;
+  margin-top: 20px;
+  margin-right: 150px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+.videotext {
+  font-family: Arial;
+  font-size:15px ;
+  padding-left: 10px;
+  font-weight: bold;
+  color:#0066ff;
+}
+.caption {
+  font-size: 20px;
+}
+#buzzfeednews {
+  font-family: "Times New Roman";
+  font-weight: bold;
+  font-size: 22px;
+}
+.autor {
+  color: #888888;
+  font-size: 14px;
+  padding-top: 10px;
+}

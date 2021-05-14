@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <style>
+        form {
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+        }
+        body {
+            background-color: aquamarine;
+        }
+        h1 {
+            font-family: "Californian FB";
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome to the quiz!</h1>
+<form action="LoginController" method="post">
+    Enter username : <input type="text" name="username"> <BR>
+    Enter password : <input type="password" name="password"> <BR>
+    Enter number of questions :  <input type="number" name="questionsNumber"> <BR>
+    Enter number of questions on a page :  <input type="number" name="questionsNumberPage"> <BR>
+    <input type="submit" value="Login"/>
+</form>
+</body>
+</html>
